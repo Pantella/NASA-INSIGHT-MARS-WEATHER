@@ -2,7 +2,7 @@
   "name": "nasa-insight-mars-weather",
   "version": "1.0.0",
   "description": "Landing Page which shows weather data sended by Insight mission from Mars",
-  "source": "src/index.html",
+  "source": "/src/index.html",
   "scripts": {
     "clean": "rm -rf dist/* && rm -rf .parcel-cache/*",
     "start": "parcel",
@@ -32,6 +32,7 @@
     "three": "^0.138.3"
   },
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.3.2",
     "gh-pages": "^3.2.3",
     "parcel": "^2.3.2"
   }
