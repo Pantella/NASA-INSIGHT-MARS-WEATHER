@@ -1,0 +1,38 @@
+{
+  "name": "nasa-insight-mars-weather",
+  "version": "1.0.0",
+  "description": "Landing Page which shows weather data sended by Insight mission from Mars",
+  "source": "src/index.html",
+  "scripts": {
+    "clean": "rm -rf dist/* && rm -rf .parcel-cache/*",
+    "start": "parcel",
+    "build:parcel": "parcel build --public-url ./",
+    "build": "npm run clean && npm run build:parcel",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pantella/NASA-INSIGHT-MARS-WEATHER.git"
+  },
+  "keywords": [
+    "api",
+    "nasa",
+    "fetch",
+    "gsap",
+    "threejs"
+  ],
+  "author": "Giacomo Mantegazza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pantella/NASA-INSIGHT-MARS-WEATHER/issues"
+  },
+  "homepage": "https://github.com/Pantella/NASA-INSIGHT-MARS-WEATHER#readme",
+  "dependencies": {
+    "gsap": "^3.9.1",
+    "three": "^0.138.3"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "parcel": "^2.3.2"
+  }
+}
