@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     async function makeRequest() {
         // let data = await myGestore.fetchApi();
-        let data = getFakeData();
+        // let data = getFakeData();
+        let data = null;
 
         let isDataValid = myGestore.checkJson( data );
         console.log(`Check: ${isDataValid}`);

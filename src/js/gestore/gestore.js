@@ -59,6 +59,8 @@ class Gestore {
         alertElement.appendChild(alertPara);
 
         document.querySelector('body').appendChild(alertElement);
+
+        this.exposeCards();
     }
 
     hideAlert() {

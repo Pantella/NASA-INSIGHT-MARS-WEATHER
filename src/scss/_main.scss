@@ -57,3 +57,23 @@
         }
     }
 }
+
+.alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    p {
+        width: fit-content;
+        margin: 1rem auto;
+
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+
+        background-color: red;
+
+        font-weight: $font-w-bold;
+        color: $white;
+    }
+}
