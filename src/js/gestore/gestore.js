@@ -1,3 +1,7 @@
+import gsap from 'gsap';
+
+import {translateMonth,getFakeData} from './utility';
+
 class Gestore {
     constructor() {
         this.basicUrl = 'https://api.nasa.gov/insight_weather/?';
@@ -5,10 +9,12 @@ class Gestore {
         this.feedType = 'feedtype=json';
         this.versionApi = 'ver=1.0';
 
-        this.todayCard = document.querySelector('#today');
-        this.firstDayCard = document.querySelector('#firstDay');
-        this.secondDayCard = document.querySelector('#secondDay');
-        this.thirdDayCard = document.querySelector('#thirdDay');
+        this.daysCards = [
+            document.querySelector('#today'),
+            document.querySelector('#firstDay'),
+            document.querySelector('#secondDay'),
+            document.querySelector('#thirdDay')
+        ]
     }
 
     async fetchApi() {
@@ -35,7 +41,7 @@ class Gestore {
         
         if ( isValid ) {
             console.log('valid data');
-            return dataObj.sol_keys.lenght>0 ? true : false
+            return dataObj.sol_keys.length>0 ? true : false
         } else {
             return isValid
         }
@@ -61,15 +67,63 @@ class Gestore {
 
     populateCards(dataObj) {
 
-        let mySols = dataObj.sol_keys.slice((dataObj.sol_keys.lenght-3));
+        let mySols = dataObj.sol_keys.slice(3).reverse();
+        let dayCalendar = new Date();
 
-        for ( sol of mySols ) {
-            
-        }
+        mySols.forEach( (element,index)=>{
+            // this.daysCards
+            const lowTemp = dataObj[element].AT.mn;
+            const maxTemp = dataObj[element].AT.mx;
+
+            console.log('sol: '+element);
+
+            this.daysCards[index].querySelector('.card-sol').textContent = `Sol ${element}`;
+            this.daysCards[index].querySelector('.card-date').textContent = `${translateMonth(dayCalendar.getMonth())}, ${dayCalendar.getDay()} ${dayCalendar.getFullYear()}`;
+            this.daysCards[index].querySelector('.card-max').textContent = `High:${maxTemp}°F`;
+            this.daysCards[index].querySelector('.card-min').textContent = `Low:${lowTemp}°F`;
+
+        });
+
+        this.exposeCards();
 
     }
 
-    exposeCards() {}
+    exposeCards() {
+        let exposeCards = gsap.timeline();
+
+        exposeCards.to(
+            this.daysCards[0],
+            {
+                duration: 1,
+                ease: "power2.out",
+                opacity: 1
+            }
+        ).to(
+            this.daysCards[1],
+            {
+                duration: 1,
+                ease: "power2.out",
+                opacity: 1
+            },
+            '>'
+        ).to(
+            this.daysCards[2],
+            {
+                duration: 1,
+                ease: "power2.out",
+                opacity: 1
+            },
+            '>'
+        ).to(
+            this.daysCards[3],
+            {
+                duration: 1,
+                ease: "power2.out",
+                opacity: 1
+            },
+            '>'
+        )
+    }
 }
 
 export default Gestore

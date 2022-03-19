@@ -1,9 +1,12 @@
 import Gestore from './gestore/gestore';
 
+import {translateMonth,getFakeData} from './gestore/utility';
+
 document.addEventListener('DOMContentLoaded',()=>{
 
     async function makeRequest() {
-        let data = await myGestore.fetchApi();
+        // let data = await myGestore.fetchApi();
+        let data = getFakeData();
 
         let isDataValid = myGestore.checkJson( data );
         console.log(`Check: ${isDataValid}`);

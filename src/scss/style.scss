@@ -9,3 +9,7 @@
     @include flex-column;
     @include flex-center-start;
 }
+
+.card-today, .card-before {
+    opacity: 0;
+}
