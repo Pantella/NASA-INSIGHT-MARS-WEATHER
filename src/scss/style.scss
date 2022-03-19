@@ -1,2 +1,11 @@
 @use './reset';
+@use './header';
+@use './main';
+
 @import './variables';
+@import './mixins';
+
+.panel-container {
+    @include flex-column;
+    @include flex-center-start;
+}

@@ -1,66 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mars Weather - InSight Mission</title>
-    <link rel="stylesheet" href="./scss/style.scss">
-</head>
-<body>
-    <header>
-        <h1>Lorem ipsum dolor sit amet.</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quos eos, iste tempora laboriosam quam non eligendi perspiciatis dolorum molestiae?</p>
-    </header>
-    <main>
-        <div>
-            <section>
-                <article>
-                    <div>
-                        <h3>Sol 3415</h3>
-                        <p>March 15, 2022</p>
-                    </div>
-                    <div>
-                        <p>High:-2°C</p>
-                        <p>Low:-69°C</p>
-                    </div>
-                </article>
-            </section>
-                <article>
-                    <div>
-                        <h3>Sol 3414</h3>
-                        <p>Mar. 14</p>
-                    </div>
-                    <div>
-                        <p>High: -6°C</p>
-                        <p>Low: -70°C</p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <h3>Sol 3413</h3>
-                        <p>Mar. 13</p>
-                    </div>
-                    <div>
-                        <p>High: -6°C</p>
-                        <p>Low: -66°C</p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <h3>Sol 3412</h3>
-                        <p>Mar. 12</p>
-                    </div>
-                    <div>
-                        <p>High: -12°C</p>
-                        <p>Low: -65°C</p>
-                    </div>
-                </article>
-            <section>
-
-            </section>
-        </div>
-    </main>
+    <link rel="stylesheet" href="./scss/style.scss" />
+  </head>
+  <body>
+    <div class="panel-container">
+      <header class="panel-header">
+          <div class="header-card">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quos
+              eos, iste tempora laboriosam quam non eligendi perspiciatis dolorum
+              molestiae?
+            </p>
+          </div>
+      </header>
+      <main class="panel-data">
+        <section class="panel-data-today">
+          <article class="card-today">
+            <div class="sol-date">
+              <h3>Sol 3415</h3>
+              <p>March 15, 2022</p>
+            </div>
+            <div class="sol-info">
+              <p>High:-2°C</p>
+              <p>Low:-69°C</p>
+            </div>
+          </article>
+        </section>
+        <section class="panel-data-before">
+            <article class="card-before">
+                <div class="sol-date">
+                  <h3>Sol 3414</h3>
+                  <p>Mar. 14</p>
+                </div>
+                <div class="sol-info">
+                  <p>High: -6°C</p>
+                  <p>Low: -70°C</p>
+                </div>
+              </article>
+              <article class="card-before">
+                <div class="sol-date">
+                  <h3>Sol 3413</h3>
+                  <p>Mar. 13</p>
+                </div>
+                <div class="sol-info">
+                  <p>High: -6°C</p>
+                  <p>Low: -66°C</p>
+                </div>
+              </article>
+              <article class="card-before">
+                <div class="sol-date">
+                  <h3>Sol 3412</h3>
+                  <p>Mar. 12</p>
+                </div>
+                <div class="sol-info">
+                  <p>High: -12°C</p>
+                  <p>Low: -65°C</p>
+                </div>
+              </article>
+        </section>
+      </main>
+    </div>
     <script src="./js/main.js"></script>
-</body>
+  </body>
 </html>

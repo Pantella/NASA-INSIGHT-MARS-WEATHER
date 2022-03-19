@@ -1,0 +1,15 @@
+@import './variables';
+@import './mixins';
+
+.panel-header {
+    min-height: 50vh;
+    max-height: 50vh;
+
+    @include flex-row;
+    @include flex-start-center;
+
+    .header-card {
+        min-width: 50vw;
+        max-width: 50vw;;
+    }
+}
