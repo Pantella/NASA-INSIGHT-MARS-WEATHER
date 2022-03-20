@@ -2,8 +2,8 @@
 @import './mixins';
 
 .panel-header {
-    min-height: 50vh;
-    max-height: 50vh;
+    min-height: 60vh;
+    max-height: 60vh;
 
     @include flex-row;
     @include flex-start-center;
@@ -16,7 +16,7 @@
 
         .btn-container {
             width: 100%;
-            padding: 2rem;
+            padding: 2rem 0 0 0;
 
             @include flex-row;
             @include flex-center;

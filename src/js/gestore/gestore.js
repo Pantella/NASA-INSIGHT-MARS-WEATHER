@@ -80,7 +80,7 @@ class Gestore {
             console.log('sol: '+element);
 
             this.daysCards[index].querySelector('.card-sol').textContent = `Sol ${element}`;
-            this.daysCards[index].querySelector('.card-date').textContent = `${translateMonth(dayCalendar.getMonth())}, ${dayCalendar.getDay()} ${dayCalendar.getFullYear()}`;
+            this.daysCards[index].querySelector('.card-date').textContent = `${translateMonth(dayCalendar.getMonth())}, ${(dayCalendar.getDate()-index)} ${dayCalendar.getFullYear()}`;
             this.daysCards[index].querySelector('.card-max').textContent = `High:${maxTemp}°F`;
             this.daysCards[index].querySelector('.card-min').textContent = `Low:${lowTemp}°F`;
 
