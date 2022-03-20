@@ -14,7 +14,7 @@
     // align-items: center;
 
     .panel-data-today {
-        background-color: aquamarine;
+        // background-color: aquamarine;
 
         min-width: 40vw;
         max-width: 40vw;
@@ -22,7 +22,7 @@
         .card-today {
             height: 25vh;
 
-            background-color: #ffffff65;
+            background-color: $white-card-back;
             border-radius: 20px;
 
             max-width: 400px;
@@ -31,14 +31,28 @@
             @include flex-row;
             @include flex-evenly-center;
 
-            
-
             .sol-date {
+                height: 50%;
 
+                @include flex-column;
+                @include flex-center;
             }
 
             .sol-info {
+                height: 50%;
 
+                @include flex-column;
+                @include flex-center-start;
+            }
+
+            .sol-info::before {
+                content: '';
+                display: block;
+                position:absolute;
+                left:-25%;
+                width: 5px;
+                height: 100%;
+                background-color: $white;
             }
         }
     }
