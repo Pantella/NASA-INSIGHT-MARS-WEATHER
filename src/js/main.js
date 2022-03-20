@@ -1,3 +1,4 @@
+import {World} from './world/world';
 import Gestore from './gestore/gestore';
 
 import {translateMonth,getFakeData} from './gestore/utility';
@@ -14,6 +15,11 @@ document.addEventListener('DOMContentLoaded',()=>{
 
         isDataValid ? myGestore.populateCards(data) : myGestore.exposeAlert() ;
     }
+
+    const container = document.querySelector('#scene-container');
+    const world = new World(container);
+
+    world.start();
 
     let subBtn = document.querySelector('#sub-btn');
 
