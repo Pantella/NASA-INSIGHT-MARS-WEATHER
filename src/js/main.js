@@ -6,9 +6,9 @@ import {translateMonth,getFakeData} from './gestore/utility';
 document.addEventListener('DOMContentLoaded',()=>{
 
     async function makeRequest() {
-        // let data = await myGestore.fetchApi();
-        let data = getFakeData();
-        // let data = null;
+        let data = await myGestore.fetchApi();
+        // let data = getFakeData();        /* uncomment to use fake test data instead of fetch from NASA API */
+        // let data = null;                 /* uncomment to test a failed fetching from NASA API */
 
         let isDataValid = myGestore.checkJson( data );
         console.log(`Check: ${isDataValid}`);

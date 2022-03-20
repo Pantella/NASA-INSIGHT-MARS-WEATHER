@@ -20,17 +20,17 @@ class Gestore {
     async fetchApi() {
         const queryUrl = `${this.basicUrl}${this.apiKey}&${this.feedType}&${this.versionApi}`;
 
-        console.log(`queryUrl: ${queryUrl}`);
+        // console.log(`queryUrl: ${queryUrl}`);
 
         let askNasa = await fetch(queryUrl);
 
         if ( askNasa.ok ) {
-            console.log(`Fetch succeeded: ${askNasa.status}`);
+            // console.log(`Fetch succeeded: ${askNasa.status}`);
             // console.log(`Data: ${JSON.parse(await askNasa.text())}`);
             // console.log(`Data: ${await askNasa.json()}`);
             return await askNasa.json()
         } else {
-            console.log(`ERROR: ${askNasa.status}`);
+            // console.log(`ERROR: ${askNasa.status}`);
             return false
         }
     }
@@ -40,7 +40,7 @@ class Gestore {
         const isValid = dataObj ? true : false ;
         
         if ( isValid ) {
-            console.log('valid data');
+            // console.log('valid data');
             return dataObj.sol_keys.length>0 ? true : false
         } else {
             return isValid
@@ -73,7 +73,7 @@ class Gestore {
         let dayCalendar = new Date();
 
         mySols.forEach( (element,index)=>{
-            // this.daysCards
+
             const lowTemp = dataObj[element].AT.mn;
             const maxTemp = dataObj[element].AT.mx;
 
