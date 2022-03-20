@@ -10,6 +10,21 @@
 
     .header-card {
         min-width: 50vw;
-        max-width: 50vw;;
+        max-width: 50vw;
+
+        padding: 0 2rem;
+
+        .btn-container {
+            width: 100%;
+            padding: 2rem;
+
+            @include flex-row;
+            @include flex-center;
+
+            /* button {
+                margin-left: auto;
+                margin-right: auto;
+            } */
+        }
     }
 }

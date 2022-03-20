@@ -1,0 +1,38 @@
+@import './variables';
+
+.main-title {
+    font-size: 4rem;
+}
+
+.header-para {
+
+    padding-top: 1rem;
+
+    font-size: 1.2rem;
+    font-weight: $font-w-small;
+}
+
+#sub-btn {
+
+    border: 5px solid $light-blue;
+    border-radius: 10px;
+
+    padding: 0.5rem 1rem;
+
+    background-color: transparent;
+
+    font-size: 1.5rem;
+    color: $light-blue;
+    font-weight: $font-w-bold;
+
+}
+
+#sub-btn:active {
+
+    border-color: $white;
+
+    background-color: transparent;
+
+    color: $white;
+
+}

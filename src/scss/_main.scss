@@ -20,10 +20,18 @@
         max-width: 40vw;
 
         .card-today {
-            height: 20vh;
+            height: 25vh;
+
+            background-color: #ffffff65;
+            border-radius: 20px;
+
+            max-width: 400px;
+            margin: auto;
 
             @include flex-row;
             @include flex-evenly-center;
+
+            
 
             .sol-date {
 
