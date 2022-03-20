@@ -4,10 +4,10 @@ import { createParticleSky } from './../components/particleSky';
 import { createLightFirst } from "../components/light1.js";
 
 class ScenePopulator {
-    constructor(scene, loop, objectsDistance,touchDevice) {
+    constructor(scene, loop) {
 
         this.scene = scene;
-        this.sphere = createSphere(objectsDistance,0,touchDevice);
+        this.sphere = createSphere();
         this.sky = createParticleSky();
         this.lightSphere = createLightFirst();
 

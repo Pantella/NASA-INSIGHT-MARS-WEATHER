@@ -32,7 +32,7 @@ class World {
         loop = new Loop(camera, scene, renderer);
         container.append(renderer.domElement);
 
-        const scenePopulator = new ScenePopulator(scene, loop, objectsDistance,touchDevice);
+        const scenePopulator = new ScenePopulator(scene, loop);
         scenePopulator.populate();
 
         const resizer = new Resizer(container, camera, renderer, objectsDistance,scene,touchDevice);
