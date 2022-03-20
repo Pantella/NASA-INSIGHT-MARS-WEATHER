@@ -5,7 +5,7 @@ import { SphereGeometry, MeshStandardMaterial, Mesh, TextureLoader, MathUtils } 
 
 function setMaterial() {
 
-    marsImageUrl = new URL('./../../../images/mar0kuu2.jpg', import.meta.url);
+    let marsImageUrl = new URL('./../../../images/mar0kuu2.jpg', import.meta.url);
 
     const texture = new TextureLoader().load(marsImageUrl);
     const material = new MeshStandardMaterial({
